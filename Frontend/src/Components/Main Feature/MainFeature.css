@@ -1,0 +1,36 @@
+#mainfeature{
+    margin: 100px auto;
+    .mf-up{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        h2{
+            text-align: center;
+            font-size: 40px;
+            font-weight: 500;
+        }
+        hr{
+            margin: 0px auto;
+            width: 5%;
+            height: 5px;
+            background-color: #FE4C50;
+            color: #FE4C50;
+            border: none;
+        }
+        ul{
+            display: flex;
+            gap: 0;
+            li{
+                font-size: 14px;
+                padding: 5px 30px;
+                margin: 0;
+                border: 1px solid rgba(0, 0, 0, 0.078);
+            }
+        }
+    }
+    .mf-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    }
+}

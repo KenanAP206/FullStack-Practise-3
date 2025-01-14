@@ -17,9 +17,9 @@ app.get("/",(req,res)=>{
 
 let ProductSchema = new mongoose.Schema({
     name:{ type: String, required: true },
-    description:{ type: String},
-    country:{ type: String},
-    groupNumber:{ type: Number},
+    discount:{ type: Number},
+    price:{ type: Number},
+    category:{ type: String},
     image:{ type: String}
 })
 
