@@ -1,21 +1,27 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import Hero from '../../Components/Hero'
 import Feature from '../../Components/Feature'
 import MainFeature from '../../Components/Main Feature'
 import Timer from '../../Components/Timer'
 import Blogs from '../../Components/Blogs'
-function index() {
+
+function Index() {
   return (
     <div>
-        <main>
+      <Helmet>
+        <title>Home - Welcome to Our Store</title>
+        <meta name="description" content="Discover our latest products and offers." />
+      </Helmet>
+      <main>
         <Hero/>
         <Feature/>
         <MainFeature/>
         <Timer/>
         <Blogs/>
-        </main>
+      </main>
     </div>
   )
 }
 
-export default index
+export default Index

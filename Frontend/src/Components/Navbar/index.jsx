@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Navbar.css'
 import { FaSearch, FaUser, FaRegHeart, FaShoppingCart } from 'react-icons/fa'
 import { IoChevronDownSharp } from "react-icons/io5";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import { basketContext } from '../../context/BasketContext'
+import { FaBars } from "react-icons/fa";
 
 function Navbar() {
+  const { basket } = useContext(basketContext)
+
   return (
     <>
   
@@ -57,8 +61,8 @@ function Navbar() {
             </div>
             <div className="main_menu">
               <ul>
-                <li><NavLink to="/">home</NavLink></li>
-                <li><NavLink to="/add">Add</NavLink></li>
+                <li><NavLink style={({ isActive }) => ({ color: isActive ? '#FE4C50' : 'black' })} to="/">home</NavLink></li>
+                <li><NavLink style={({ isActive }) => ({ color: isActive ? '#FE4C50' : 'black' })} to="/add">Add</NavLink></li>
                 <li><a href="#">promotion</a></li>
                 <li><a href="#">pages</a></li>
                 <li><a href="#">blog</a></li>
@@ -78,10 +82,12 @@ function Navbar() {
                 <li className="cart">
                   <NavLink to="/basket">
                     <FaShoppingCart />
-                    <span className="cart_count">0</span>
+                    <span className="cart_count">{basket.length}</span>
                   </NavLink>
                 </li>
+                <FaBars className='bar'/>
               </ul>
+ 
             </div>
           </div>
         </div>

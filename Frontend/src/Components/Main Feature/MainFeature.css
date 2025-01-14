@@ -1,5 +1,5 @@
 #mainfeature{
-    margin: 100px auto;
+    margin: 100px auto 300px;
     .mf-up{
         display: flex;
         align-items: center;
@@ -32,5 +32,6 @@
     .mf-content{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        gap: 100px 10px;
     }
 }

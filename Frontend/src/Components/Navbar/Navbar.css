@@ -189,4 +189,49 @@ ul {
     color: #fe4c50;
 }
 
+.bar{
+    display: none;
+}
 
+
+@media (max-width: 850px) {
+    .main_menu ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      z-index: 10;
+    }
+  
+    .menu-button {
+      display: flex; 
+    }
+  
+    .top_nav {
+      display: none; 
+    }
+  
+    .bar{
+      display: flex;
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+        .container{
+            max-width: 100% !important;
+            margin: auto !important;
+        }
+
+        .top_nav_content {
+            width: 100% !important;
+            margin: auto !important;
+        }
+        
+        li{
+            display: none;
+        }
+  }
